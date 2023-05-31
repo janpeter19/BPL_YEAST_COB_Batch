@@ -13,7 +13,7 @@ Below a diagram that is obtained in the notebook.
 ![](Fig_BPL_YEAST_COB_Batch.png)
 
 You start up the notebook in Colab by pressing here
-[start BPL notebook](https://colab.research.google.com/github/janpeter19/BPL_YEAST_COB_Batch/blob/main/BPL_YEAST_COB_Batch_colab.ipynb)
+[start BPL notebook](https://colab.research.google.com/github/janpeter19/BPL_YEAST_COB_Batch/blob/main/Notes_YEAST_COB_Batch_colab.ipynb)
 or alternatively (experimentally)
 [start BPL notebook with FMPy](https://github.com/janpeter19/BPL_YEAST_COB_Batch/blob/main/BPL_YEAST_COB_Batch_fmpy_colab.ipynb).
 Then you in the menu choose Runtime/Run all. If you have chosen the altarnative with FMPy click first on the symbol Open in Colab.
