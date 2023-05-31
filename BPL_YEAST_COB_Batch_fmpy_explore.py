@@ -10,6 +10,7 @@
 # 2023-05-29 - Update to FMU-explore 0.9.7 
 # 2023-05-31 - Adjustments for simplifications of the model and included qO2 for logging as well
 # 2023-05-31 - Adjusted for FMPy
+# 2023-05-11 - Quick fix for OM FMU wtih small negative ethanol conc
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -519,7 +520,7 @@ def simu(simulationTime=simulationTime, mode='Initial', options=opts_std, diagra
       for command in diagrams: eval(command)
    
       # Store final state values in stateDict:        
-      for key in stateDict.keys(): stateDict[key] = model_get(key)  
+      for key in stateDict.keys(): stateDict[key] = max(model_get(key), 0.0)  # Quick fix for OM FMU  
          
       # Store time from where simulation will start next time
       prevFinalTime = sim_res['time'][-1]

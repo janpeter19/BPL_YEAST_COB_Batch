@@ -9,6 +9,7 @@
 # 2023-05-26 - Added plotType TimeSeries2 for the Modelica paper
 # 2023-05-29 - Update to FMU-explore 0.9.7 
 # 2023-05-31 - Adjustments for simplifications of the model and included qO2 for logging as well
+# 2023-05-11 - Quick fix for OM FMU wtih small negative ethanol conc
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -456,7 +457,7 @@ def simu(simulationTimeLocal=simulationTime, mode='Initial', options=opts_std, d
       for command in diagrams: eval(command)
             
       # Store final state values stateDict:
-      for key in list(stateDict.keys()): stateDict[key] = model.get(key)[0]        
+      for key in list(stateDict.keys()): stateDict[key] = max(model.get(key)[0], 0) # quick fick         
 
       # Store time from where simulation will start next time
       prevFinalTime = model.time
