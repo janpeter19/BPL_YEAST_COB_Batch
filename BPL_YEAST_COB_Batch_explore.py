@@ -9,7 +9,8 @@
 # 2023-05-26 - Added plotType TimeSeries2 for the Modelica paper
 # 2023-05-29 - Update to FMU-explore 0.9.7 
 # 2023-05-31 - Adjustments for simplifications of the model and included qO2 for logging as well
-# 2023-05-11 - Quick fix for OM FMU wtih small negative ethanol conc
+# 2023-05-31 - Quick fix for OM FMU wtih small negative ethanol conc
+# 2023-05-31 - Adjusted to from importlib.meetadata import version
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -21,7 +22,7 @@ import matplotlib.pyplot as plt
 from pyfmi import load_fmu
 from pyfmi.fmi import FMUException
 from itertools import cycle
-from importlib_metadata import version   # included in future Python 3.8
+from importlib.metadata import version   
 
 # Set the environment - for Linux a JSON-file in the FMU is read
 if platform.system() == 'Linux': locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
