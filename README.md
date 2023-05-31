@@ -7,7 +7,7 @@ of ethanol formation is dropped to simplify. The focus of the repository is to i
 idea of constrained-based modelling. This example was originally presented usering an ODE-model
 but can can as well be described in terms of constraint-based modelling. The simulations are
 done with FMU in combination with the Python package Optlang that is used for calculating the
-the metabolic flow rates at each time instant. A so-called "Direct Approaich" is used.
+the metabolic flow rates at each time instant. A so-called "Direct Approach" is used.
 Below a diagram that is obtained in the notebook.
 
 ![](Fig_BPL_YEAST_COB_Batch.png)
