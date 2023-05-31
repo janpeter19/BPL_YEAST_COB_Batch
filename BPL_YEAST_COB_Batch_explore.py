@@ -46,10 +46,10 @@ elif platform.system() == 'Linux':
    if flag_vendor in ['OM','om']:
       print('Linux - run FMU pre-comiled OpenModelica 1.21.0') 
       if flag_type in ['CS','cs']:         
-         fmu_model ='BPL_YEAST_COB_Batch_linux_om_cs.fmu'    
+         fmu_model ='BPL_YEAST_COB.Batch_linux_om_cs.fmu'    
          model = load_fmu(fmu_model, log_level=0) 
       if flag_type in ['ME','me']:         
-         fmu_model ='BPL_YEAST_COB_Batch_linux_om_me.fmu'    
+         fmu_model ='BPL_YEAST_COB.Batch_linux_om_me.fmu'    
          model = load_fmu(fmu_model, log_level=0)
    else:    
       print('There is no FMU for this platform')
@@ -84,7 +84,7 @@ if flag_vendor in ['JM', 'jm']:
 elif flag_vendor in ['OM', 'om']:
    MSL_usage = '3.2.3 - used components: none' 
    MSL_version = '3.2.3'
-   BPL_version = 'Bioprocess Library version 2.1.1-beta' 
+   BPL_version = 'Bioprocess Library version 2.1.1' 
 else:    
    print('There is no FMU for this platform')
 

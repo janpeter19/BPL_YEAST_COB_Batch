@@ -50,10 +50,10 @@ elif platform.system() == 'Linux':
    if flag_vendor in ['OM','om']:
       print('Linux - run FMU pre-comiled OpenModelica 1.21.0') 
       if flag_type in ['CS','cs']:         
-         fmu_model ='BPL_YEAST_COB_Batch_linux_om_cs.fmu'    
+         fmu_model ='BPL_YEAST_COB.Batch_linux_om_cs.fmu'    
          model = load_fmu(fmu_model, log_level=0) 
       if flag_type in ['ME','me']:         
-         fmu_model ='BPL_YEAST_COB_Batch_linux_om_me.fmu'    
+         fmu_model ='BPL_YEAST_COB.Batch_linux_om_me.fmu'    
       model_description = read_model_description(fmu_model) 
    else:    
       print('There is no FMU for this platform')
@@ -64,6 +64,7 @@ if flag_type in ['CS', 'cs']:
    opts_fast = {'NCP': 100}
 elif flag_type in ['ME', 'me']:
    opts_std = {'NCP': 500}
+   opts_fast = {'NCP': 100}
 else:    
    print('There is no FMU for this platform')
   
