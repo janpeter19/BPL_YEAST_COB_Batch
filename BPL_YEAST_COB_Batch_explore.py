@@ -203,7 +203,7 @@ def newplot(title='Batch cultivation', plotType='TimeSeries'):
       
       diagrams.clear()
       diagrams.append("ax1.plot(t,sim_res['bioreactor.c[1]'], label='X', color='r', linestyle=linetype)") 
-      diagrams.append("ax2.plot(t,sim_res['bioreactor.culture.mu'], label='mu', color='r', linestyle=linetype)")     
+      diagrams.append("ax2.step(t,sim_res['bioreactor.culture.mu'], label='mu', color='r', linestyle=linetype)")     
       diagrams.append("ax3.plot(t,sim_res['bioreactor.c[2]'], label='G', color='b', linestyle=linetype)") 
       diagrams.append("ax3.plot(t,sim_res['bioreactor.c[3]'], label='E', color='g', linestyle=linetype)") 
       diagrams.append("ax3.legend(['G','E'])")
