@@ -13,7 +13,7 @@
 # 2023-05-31 - Quick fix for OM FMU wtih small negative ethanol conc
 # 2023-05-31 - Adjusted to from importlib.meetadata import version
 # 2023-09-12 - Updated to FMU-explore 0.9.8 and introduced process diagram
-# 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere
+# 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere - NPC in capital letters
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -473,7 +473,7 @@ def simu(simulationTime=simulationTime, mode='Initial', options=opts_std, diagra
          validate = False,
          start_time = 0,
          stop_time = simulationTime,
-         output_interval = simulationTime/options['ncp'],
+         output_interval = simulationTime/options['NCP'],
          record_events = True,
          start_values = start_values,
          fmi_call_logger = None,
@@ -509,7 +509,7 @@ def simu(simulationTime=simulationTime, mode='Initial', options=opts_std, diagra
             validate = False,
             start_time = prevFinalTime,
             stop_time = prevFinalTime + simulationTime,
-            output_interval = simulationTime/options['ncp'],
+            output_interval = simulationTime/options['NCP'],
             record_events = True,
             start_values = start_values,
             fmi_call_logger = None,
