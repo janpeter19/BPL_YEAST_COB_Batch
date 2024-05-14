@@ -13,7 +13,8 @@
 # 2023-05-31 - Quick fix for OM FMU wtih small negative ethanol conc
 # 2023-05-31 - Adjusted to from importlib.meetadata import version
 # 2023-09-12 - Updated to FMU-explore 0.9.8 and introduced process diagram
-# 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere - NPC in capital letters
+# 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere - NPC in capital letters'
+# 2024-05-14 - Polish the script
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -48,9 +49,6 @@ if platform.system() == 'Windows':
    fmu_model ='BPL_YEAST_COB_Batch_windows_jm_cs.fmu'        
    model_description = read_model_description(fmu_model)  
 elif platform.system() == 'Linux':
-#   flag_vendor = input('Linux - run FMU from JModelica (JM) or OpenModelica (OM)?')  
-#   flag_type = input('Linux - run FMU-CS (CS) or ME (ME)?')  
-#   print()   
    flag_vendor = 'OM'
    flag_type = 'ME'
    if flag_vendor in ['OM','om']:
@@ -83,7 +81,7 @@ if flag_vendor in ['JM', 'jm']:
 elif flag_vendor in ['OM', 'om']:
    MSL_usage = '3.2.3 - used components: RealInput, RealOutput' 
    MSL_version = '3.2.3'
-   BPL_version = 'Bioprocess Library version 2.1.2 prel' 
+   BPL_version = 'Bioprocess Library version 2.2.0' 
 else:    
    print('There is no FMU for this platform')
 
@@ -314,7 +312,7 @@ def describe(name, decimals=3):
       
 #------------------------------------------------------------------------------------------------------------------
 #  General code 
-FMU_explore = 'FMU-explore for FMPy version 0.9.9'
+FMU_explore = 'FMU-explore for FMPy version 1.0.0'
 #------------------------------------------------------------------------------------------------------------------
 
 # Define function par() for parameter update
