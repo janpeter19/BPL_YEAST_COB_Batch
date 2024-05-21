@@ -15,6 +15,7 @@
 # 2023-09-12 - Updated to FMU-explore 0.9.8 and introduced process diagram
 # 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere - NPC in capital letters'
 # 2024-05-14 - Polish the script
+# 2024-05-20 - Updated the OpenModelica version to 1.23.0-dev
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -52,7 +53,7 @@ elif platform.system() == 'Linux':
    flag_vendor = 'OM'
    flag_type = 'ME'
    if flag_vendor in ['OM','om']:
-      print('Linux - run FMU pre-comiled OpenModelica 1.21.0') 
+      print('Linux - run FMU pre-comiled OpenModelica 1.23.0-dev') 
       if flag_type in ['CS','cs']:         
          fmu_model ='BPL_YEAST_COB.Batch_linux_om_cs.fmu'    
          model = load_fmu(fmu_model, log_level=0) 
