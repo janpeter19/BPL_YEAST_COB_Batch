@@ -15,6 +15,7 @@
 # 2024-03-07 - Update FMU-explore 0.9.9 - now with _0 replaced with _start everywhere
 # 2024-05-13 - Polish the script
 # 2024-05-20 - Updated the OpenModelica version to 1.23.0-dev
+# 2024-11-08 - Updated to BPL 2.3.0
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -91,7 +92,7 @@ if flag_vendor in ['JM', 'jm']:
 elif flag_vendor in ['OM', 'om']:
    MSL_usage = '3.2.3 - used components: none' 
    MSL_version = '3.2.3'
-   BPL_version = 'Bioprocess Library version 2.2.2 - GUI' 
+   BPL_version = 'Bioprocess Library version 2.3.0' 
 else:    
    print('There is no FMU for this platform')
 
@@ -106,7 +107,7 @@ timeDiscreteStates = {}
 component_list_minimum = ['bioreactor', 'bioreactor.culture']
 
 # Provide process diagram on disk
-fmu_process_diagram ='BPL_GUI_YEAST_COB_Batch_process_diagram_om.png'
+fmu_process_diagram ='BPL_YEAST_COB_Batch_process_diagram_om.png'
 
 #------------------------------------------------------------------------------------------------------------------
 #  Specific application constructs: stateDict, parDict, diagrams, newplot(), describe()
