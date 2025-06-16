@@ -19,6 +19,7 @@
 # 2024-06-01 - Corrected model_get() to handle string values as well - improvement very small and keep ver 1.0.0
 # 2024-08-13 - Corrected model_get() to handle calculatedParameters - call it ver 1.0.1
 # 2024-11-08 - Updated to BPL 2.3.0
+# 2025-06-16 - Test MSL 4.1.0 with OpenModelica genreated FMU
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -83,8 +84,8 @@ if flag_vendor in ['JM', 'jm']:
    MSL_version = [x[1] for x in [(constants[k].name, constants[k].start) for k in range(len(constants))] if 'MSL.version' in x[0]][0]
    BPL_version = [x[1] for x in [(constants[k].name, constants[k].start) for k in range(len(constants))] if 'BPL.version' in x[0]][0] 
 elif flag_vendor in ['OM', 'om']:
-   MSL_usage = '3.2.3 - used components: RealInput, RealOutput' 
-   MSL_version = '3.2.3'
+   MSL_usage = '4.1.0 - used components: RealInput, RealOutput' 
+   MSL_version = '4.1.0'
    BPL_version = 'Bioprocess Library version 2.3.0' 
 else:    
    print('There is no FMU for this platform')
