@@ -17,6 +17,7 @@
 # 2024-05-20 - Updated the OpenModelica version to 1.23.0-dev
 # 2024-11-08 - Updated to BPL 2.3.0
 # 2025-06-16 - Test MSL 4.1.0 with OpenModelica genreated FMU
+# 2025-97-23 - Updated to BPL 2.3.1
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
@@ -93,7 +94,7 @@ if flag_vendor in ['JM', 'jm']:
 elif flag_vendor in ['OM', 'om']:
    MSL_usage = '4.1.0 - used components: none' 
    MSL_version = '4.1.0'
-   BPL_version = 'Bioprocess Library version 2.3.0' 
+   BPL_version = 'Bioprocess Library version 2.3.1' 
 else:    
    print('There is no FMU for this platform')
 
