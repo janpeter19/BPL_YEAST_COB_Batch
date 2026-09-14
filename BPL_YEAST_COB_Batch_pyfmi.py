@@ -1,7 +1,8 @@
-# setup applicateion data BPL_YEAST_COB_Batch 
+# Setup application data BPL_YEAST_COB_Batch_pyfmi 
 # Author: Jan Peter Axelsson
 #------------------------------------------------------------------------------------------------------------------
 # 2026-08-24 - Created from earlier work started 2022-11-21
+# 2026-09-14 - Move definition of stateValue to the fmu_explore_pyfmi module ver 1.2.0
 #------------------------------------------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------------------------------------------
@@ -82,11 +83,6 @@ simulationTime = 12.0
 
 # Dictionary of time discrete states
 timeDiscreteStates = {} 
-
-# Create stateValue that later will be used to store final state and used for initialization in 'cont':
-stateValue =  {}
-stateValue = model.get_states_list()
-stateValue.update(timeDiscreteStates)
 
 # Define a minimal compoent list of the model as a starting point for describe('parts')
 component_list_minimum = ['bioreactor', 'bioreactor.culture']
