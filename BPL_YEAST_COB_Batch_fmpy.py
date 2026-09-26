@@ -2,23 +2,22 @@
 # Author: Jan Peter Axelsson
 #------------------------------------------------------------------------------------------------------------------
 # 2026-08-24 - Created from earlier work started 2022-11-21
+# 2026-09-26 - Change indentaiton from 3 spaces to 
 #------------------------------------------------------------------------------------------------------------------
 
 # Setup framework
-import sys
 import platform
 import locale
-import numpy as np 
-import matplotlib.pyplot as plt 
 from fmpy import simulate_fmu
 from fmpy import read_model_description
 
 # Set the environment - for Linux a JSON-file in the FMU is read
-if platform.system() == 'Linux': locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+if platform.system() == 'Linux': 
+    locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-#------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 #  Setup application FMU
-#------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 
 # Provde the right FMU and load for different platforms in user dialogue:
 if platform.system() == 'Windows':
@@ -64,7 +63,7 @@ elif flag_vendor in ['OM', 'om']:
 else:    
    print('There is no FMU for this platform')
 
-#------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
 
 # Simulation time
 simulationTime = 12.0
@@ -78,9 +77,9 @@ component_list_minimum = ['bioreactor', 'bioreactor.culture']
 # Provide process diagram on disk
 fmu_process_diagram ='BPL_YEAST_COB_Batch_process_diagram_om.png'
 
-#------------------------------------------------------------------------------------------------------------------
-#  Specific application constructs: stateValue, parValue, parLocation, parCheck, diagrams, ax, lines
-#------------------------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+#  Specific for application: parValue, parLocation, parCheck, keyValues, diagrams, ax, lines
+#--------------------------------------------------------------------------------------------------
    
 # Create dictionaries parValue and parLocation
 parValue = {}
