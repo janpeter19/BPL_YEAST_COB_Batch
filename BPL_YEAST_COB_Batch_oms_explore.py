@@ -180,7 +180,7 @@ FMU_explore_info()
 #------------------------------------------------------------------------------------------------------------------
 
 del parValue, parLocation, parCheck
-del model, fmu_model, fmu_process_diagram, component_list_minimum
+del fmu_model, fmu_process_diagram, component_list_minimum
 del MSL_usage, MSL_version, BPL_version
 del options, simulationTime, timeDiscreteStates
 del flag_type, flag_vendor
