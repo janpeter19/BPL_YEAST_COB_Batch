@@ -62,6 +62,7 @@ simulationTime = 12.0
 
 # Options
 options = []
+opts_fast = ['self.model.setLoggingInterval(0.5)']
 
 # Dictionary of time discrete states
 timeDiscreteStates = {'bioreactor.V':1.0, 'bioreactor.m[1]':2.0, 'bioreactor.m[2]':10.0, 'bioreactor.m[3]':3.0}
