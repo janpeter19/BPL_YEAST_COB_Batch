@@ -53,13 +53,13 @@ def newplot(title="Batch cultivation", plotType="TimeSeries"):
 
         diagrams.clear()
         diagrams.append(
-            "ax[0].plot(t,sim_res['bioreactor.c[2]'], label='G', color='b', linestyle=linetype)"
+            "ax[0].plot(t,sim_res['Batch.bioreactor.c[2]'], label='G', color='b', linestyle=linetype)"
         )
         diagrams.append(
-            "ax[1].plot(t,sim_res['bioreactor.c[3]'], label='E', color='b', linestyle=linetype)"
+            "ax[1].plot(t,sim_res['Batch.bioreactor.c[3]'], label='E', color='b', linestyle=linetype)"
         )
         diagrams.append(
-            "ax[2].plot(t,sim_res['bioreactor.c[1]'], label='X', color='b', linestyle=linetype)"
+            "ax[2].plot(t,sim_res['Batch.bioreactor.c[1]'], label='X', color='b', linestyle=linetype)"
         )
 
     elif plotType == "TimeSeries2":
@@ -86,16 +86,16 @@ def newplot(title="Batch cultivation", plotType="TimeSeries"):
 
         diagrams.clear()
         diagrams.append(
-            "ax[0].plot(t,sim_res['bioreactor.c[1]'], label='X', color='r', linestyle=linetype)"
+            "ax[0].plot(t,sim_res['Batch.bioreactor.c[1]'], label='X', color='r', linestyle=linetype)"
         )
         diagrams.append(
-            "ax[1].step(t,sim_res['bioreactor.culture.mu'], label='mu', color='r', linestyle=linetype)"
+            "ax[1].step(t,sim_res['Batch.bioreactor.culture.mu'], label='mu', color='r', linestyle=linetype)"
         )
         diagrams.append(
-            "ax[2].plot(t,sim_res['bioreactor.c[2]'], label='G', color='b', linestyle=linetype)"
+            "ax[2].plot(t,sim_res['Batch.bioreactor.c[2]'], label='G', color='b', linestyle=linetype)"
         )
         diagrams.append(
-            "ax[2].plot(t,sim_res['bioreactor.c[3]'], label='E', color='g', linestyle=linetype)"
+            "ax[2].plot(t,sim_res['Batch.bioreactor.c[3]'], label='E', color='g', linestyle=linetype)"
         )
         diagrams.append("ax[2].legend(['G','E'])")
 
@@ -125,19 +125,19 @@ def newplot(title="Batch cultivation", plotType="TimeSeries"):
 
         diagrams.clear()
         diagrams.append(
-            "ax11.plot(t,sim_res['bioreactor.c[2]'], label='G', color='b', linestyle='-')"
+            "ax11.plot(t,sim_res['Batch.bioreactor.c[2]'], label='G', color='b', linestyle='-')"
         )
         diagrams.append(
-            "ax11.plot(t,sim_res['bioreactor.c[3]'], label='E', color='r', linestyle='-')"
+            "ax11.plot(t,sim_res['Batch.bioreactor.c[3]'], label='E', color='r', linestyle='-')"
         )
         diagrams.append(
-            "ax21.plot(t,sim_res['bioreactor.c[1]'], label='X', color='b', linestyle='-')"
+            "ax21.plot(t,sim_res['Batch.bioreactor.c[1]'], label='X', color='b', linestyle='-')"
         )
         diagrams.append(
-            "ax12.plot(t,sim_res['bioreactor.culture.mu'], label='mu', color='b', linestyle='-')"
+            "ax12.plot(t,sim_res['Batch.bioreactor.culture.mu'], label='mu', color='b', linestyle='-')"
         )
 
-        diagrams.append("ax22.plot(t,sim_res['bioreactor.culture.qO2'], 'b-')")
+        diagrams.append("ax22.plot(t,sim_res['Batch.bioreactor.culture.qO2'], 'b-')")
 
     elif diagram == "PhasePlane":
         plt.figure()
