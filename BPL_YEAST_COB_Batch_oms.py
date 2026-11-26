@@ -64,7 +64,7 @@ simulationTime = 12.0
 options = []
 
 # Dictionary of time discrete states
-timeDiscreteStates = {'bioreactor.V', 'bioreactor.m[1]', 'bioreactor.m[2]', 'bioreactor.m[3]'}
+timeDiscreteStates = {'bioreactor.V':1.0, 'bioreactor.m[1]':2.0, 'bioreactor.m[2]':10.0, 'bioreactor.m[3]':3.0}
 
 # Define a minimal compoent list of the model as a starting point for describe('parts')
 component_list_minimum = ['bioreactor', 'bioreactor.culture']
